@@ -6,3 +6,23 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body #text-side {
+  width: 35vw;
+  height: 100vh;
+  background-color: #FFCDB2;
+}
+
+body #image-side {
+  width: 65vw;
+  height: 100vh;
+  background-color: #FFB4A2;
+}
