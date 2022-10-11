@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); /*font-family: 'Roboto', sans-serif;*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #008dd5;
+  color: white;
+}
+
+main h1 {
+  margin: 10px 0 7px 0;
+}
+
+.container {
+  text-align: center;
+}
+
+#main-glass {
+  width: 120px;
+  height: 250px;
+  border-radius: 6px 6px 40px 40px;
+  margin: 35px auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#main-glass div {
+  width: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: height 0.3s linear;
+}
+
+#glass-remain {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#glass-fill {
+  height: 0%;
+  border-radius: 0 0 35px 35px;
+  background-color: #6ab3f8;
+
+  color: #14248a;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+#sub span {
+  display: block;
+  margin: 5px 0;
+}
+
+#glass-group {
+  margin: 0 auto;
+  width: 300px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#glass-group span {
+  display: block;
+}
+
+.water-glass {
+  border: #14248a solid 4px;
+  border-radius: 2px 2px 17px 17px;
+  margin: 7px 10px;
+  width: 50px;
+  height: 85px;
+  background-color: white;
+
+  color: #14248a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.3s, background-color 0.2s;
+}
+
+.sub-glass:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #6ab3f8;
+  color: white;
+}
