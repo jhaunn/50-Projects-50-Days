@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); /*font-family: 'Roboto', sans-serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#progress {
+  width: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+
+  border: 3px black solid;
+  border-radius: 50%;
+  background-color: white;
+
+  color: #D3D0CB;
+  font-size: 1.1em;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle.active {
+  border-color: #44BBA4;
+  transition: border-color 300ms;
+}
+
+.circle.inactive {
+  border-color: #D3D0CB;
+  transition: border-color 300ms;
+}
+
+.bar:first-child {
+  content: "";
+  width: 0px;
+  height: 4px;
+  background-color: #44BBA4;
+  position: absolute;
+  z-index: -1;
+  transition: width 300ms;
+}
+
+.bar {
+  width: 400px;
+  height: 4px;
+  background-color: #D3D0CB;
+  position: absolute;
+  z-index: -2;
+}
+
+.bar.active {
+  background-color: #44BBA4;
+  transition: background-color 300ms;
+}
+
+.bar.inactive {
+  background-color: #D3D0CB;
+  transition: background-color 300ms;
+}
+
+#controls {
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0 15px;
+  border: none;
+  border-radius: 10px;
+
+  height: 35px;
+  width: 75px;
+
+  color: white;
+  font-size: 0.9em;
+
+  background-color: #44BBA4;
+}
+
+button:focus, button:active {
+  outline: none;
+  border: none;
+}
+
+button:disabled {
+  background-color: #D3D0CB;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled:hover {
+  cursor: default;
+}

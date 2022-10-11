@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); /*font-family: 'Roboto', sans-serif;*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("./Images/wallpaper (0).jpg");
+  background-position: center;
+  background-size: cover;
+
+  transition: background-image 0.4s ease-in;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#slide-container {
+  background-color: whitesmoke;
+  width: 60%;
+  height: 65%;
+
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide {
+  height: 100%;
+  width: 100%;
+  
+  background-image: url("./Images/wallpaper (0).jpg");
+  background-position: center;
+  background-size: cover;
+
+  transition: background-image 0.4s ease-in;
+}
+
+.arrow {
+  border: none;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+
+  color: white;
+  font-size: 2em;
+
+  position: absolute;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+#left-arrow {
+  top: 45%;
+  left: -70px;
+  border-right: none;
+}
+
+#right-arrow {
+  top: 45%;
+  right: -70px;
+  border-left: none;
+}
