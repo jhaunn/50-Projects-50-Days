@@ -8,21 +8,58 @@
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  overflow-y: hidden;
 }
 
-body #text-side {
+#center {
+  height: 100vh;
+  display: flex;
+}
+
+
+#center #text-side {
   width: 35vw;
   height: 100vh;
   background-color: #FFCDB2;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
-body #image-side {
+#center #image-side {
   width: 65vw;
   height: 100vh;
   background-color: #FFB4A2;
+  background-image: url(./Images/wallpaperflare.com_wallpaper.jpg);
+  object-fit: contain;
+  background-position: center;
+}
+
+button {
+  width: 50px;
+  height: 55px;
+  position: absolute;
+  border: none;
+  font-size: 1.25em;
+  color: grey;
+}
+
+button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+button#down {
+  right: 65vw;
+  top: 50vh;
+  border-radius: 10px 0 0 10px;
+}
+
+button#up {
+  left: 35vw;
+  bottom: 50vh;
+  border-radius: 0 10px 10px 0;
 }
