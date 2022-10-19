@@ -19,6 +19,7 @@ body {
 #center div {
   display: flex;
   color: #EDF2F4;
+  transition: transform 1s;
 }
 
 #text-side {
@@ -37,7 +38,7 @@ body {
   width: 65vw;
   height: 100vh;
   background-color: #FFB4A2;
-  object-fit: contain;
+  object-fit: cover;
   background-position: center;
 
   transform: translateY(0vh);
@@ -87,8 +88,6 @@ body {
   background-color: #0d4565;
   color: white;
 }
-
-
 
 button {
   width: 50px;
