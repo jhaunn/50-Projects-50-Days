@@ -12,31 +12,83 @@ body {
 }
 
 #center {
+  width: 100vw;
   height: 100vh;
-  display: flex;
 }
 
+#center div {
+  display: flex;
+  color: #EDF2F4;
+}
 
-#center #text-side {
+#text-side {
   width: 35vw;
   height: 100vh;
-  background-color: #FFCDB2;
-  color: white;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
+
+  transform: translateY(-400vh);
 }
 
-#center #image-side {
+#image-side {
   width: 65vw;
   height: 100vh;
   background-color: #FFB4A2;
-  background-image: url(./Images/wallpaperflare.com_wallpaper.jpg);
   object-fit: contain;
   background-position: center;
+
+  transform: translateY(0vh);
 }
+
+#a #image-side {
+  background-image: url(./Images/wallpaperflare.com_wallpaper.jpg);
+}
+
+#b #image-side {
+  background-image: url(./Images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+}
+
+#c #image-side {
+  background-image: url(./Images/wallpaperflare.com_wallpaper\ \(2\).jpg);
+}
+
+#d #image-side {
+  background-image: url(./Images/wallpaperflare.com_wallpaper\ \(3\).jpg);
+}
+
+#e #image-side {
+  background-image: url(./Images/wallpaperflare.com_wallpaper\ \(4\).jpg);
+}
+
+#e #text-side {
+  background-color: #d8a088;
+  color: white;
+}
+
+#d #text-side {
+  background-color: #fb9e6d;
+  color: white;
+}
+
+#c #text-side {
+  background-color: #474388;
+  color: white;
+}
+
+#b #text-side {
+  background-color: #9b6253;
+  color: white;
+}
+
+#a #text-side {
+  background-color: #0d4565;
+  color: white;
+}
+
+
 
 button {
   width: 50px;
@@ -56,10 +108,12 @@ button#down {
   right: 65vw;
   top: 50vh;
   border-radius: 10px 0 0 10px;
+  z-index: 1;
 }
 
 button#up {
   left: 35vw;
   bottom: 50vh;
   border-radius: 0 10px 10px 0;
-}
+  z-index: 1;
+  }
