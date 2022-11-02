@@ -8,13 +8,11 @@
 }
 
 :root {
-  /*Change colors*/
-  --color1: #264653;
-  --color2: #2D5362;
-  --color3: #2A9D8F;
-  --color4: #E9C46A;
-  --color5: #F4A261;
-  --color6: #E76F51;
+  --color1: #AA93C8;
+  --color2: #9F86C0;
+  --color3: #BE95C4;
+  --color4: #2D3047;
+  --color5: #E0F2E9;
 }
 
 body {
@@ -34,9 +32,14 @@ input {
   border: none;
   border-radius: 10px;
   background-color: var(--color3);
-  box-shadow: 0 0 20px 15px var(--color2);
-
+  box-shadow: 0 0 15px 15px var(--color2);
+  color: var(--color5);
   font-size: 1.2em;
+}
+
+::placeholder {
+  color: var(--color5);
+  opacity: 0.5;
 }
 
 input:focus {
@@ -47,6 +50,9 @@ input:focus {
   width: 1100px;
   padding: 50px 45px;
   background-color: var(--color3);
+  box-shadow: 0 0 15px 15px var(--color2);
+  margin-top: 30px;
+  color: var(--color5);
 
   /*Use grids*/
 }
