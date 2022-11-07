@@ -66,6 +66,12 @@ input:focus {
   grid-template-columns: 1fr 3fr;
 }
 
+#card.error {
+  display: block;
+
+  text-align: center;
+}
+
 #card img {
   grid-area: img;
 
@@ -81,6 +87,11 @@ input:focus {
 
   font-size: 1.8em;
   margin-bottom: 25px;
+}
+
+#card.error h1 {
+  font-size: 2em;
+  margin: 0;
 }
 
 #card p {
