@@ -9,11 +9,23 @@ async function getUser(username) {
       const { data } = await axios(APIURL + username);
 
       createCard(data);
+      getRepos(username);
    }
    catch(err) {
       if (err.response.status == 404) {
          createError();
       }
+   }
+}
+
+async function getRepos(username) {
+   try {
+      const { data } = await axios(APIURL + username + '/repos?sort=created');
+
+      CreateRepos(data);
+   }
+   catch(err) {
+      createError();
    }
 }
 
@@ -30,17 +42,21 @@ function createCard(user) {
             <li>${user.following} Following</li>
             <li>${user.public_repos} Repos</li>
          </ul>
-         <ul id="tags">
-            <li>Lorem, ipsum.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem.</li>
-            <li>Lorem, ipsum.</li>
-         </ul>
+         <ul id="tags"></ul>
       </div>
    `;
 
    main.innerHTML = cardValue;
+}
+
+function CreateRepos(data) {
+   const tags = document.querySelector('#tags');
+
+   data.slice(0,5).forEach(element => {
+      const repoEl = document.createElement('li');
+      repoEl.innerText = element.name;
+      tags.appendChild(repoEl);
+   });
 }
 
 function createError() {
