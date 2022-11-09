@@ -6,3 +6,29 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+h1 i {
+  color: red;
+}
+
+p {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+img {
+  width: 384px;
+  height: 512px;
+  object-fit: cover;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+}
