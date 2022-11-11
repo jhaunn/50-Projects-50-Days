@@ -30,6 +30,7 @@ p {
   width: 384px;
   height: 512px;
   margin: 0 auto;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -38,17 +39,20 @@ p {
 }
 
 #photo .heart {
+  position: absolute;
+  top: 0;
+  left: 0;
   color: red;
 
-  transform: scale(0);
+  transform: translate(-50%, -50%) scale(0);
   opacity: 0.5;
 
-  animation: heartAnim 1s ease-out;
+  animation: heartAnim 1.5s ease-out;
 }
 
 @keyframes heartAnim {
   to {
-    transform: scale(12);
+    transform: translate(-50%, -50%) scale(12);
     opacity: 0;
   }
 }
