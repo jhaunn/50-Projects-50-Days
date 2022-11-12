@@ -1,8 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); /*font-family: 'Roboto', sans-serif;*/
 
+:root {
+  --color1: #28262B;
+  --color2: #B5838D;
+  --color3: #E5989B;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  height: 100vh;
+  color: var(--color1);
+  background-color: var(--color3);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ #counter {
+  padding: 15px 20px;
+  background-color: var(--color2);
+  font-weight: bold;
+  font-size: 1.2em;
+
+  position: absolute;
+  bottom: 20px;
+ }
+
+ #counter input {
+  width:50px;
+  padding: 3px;
+  background-color: var(--color3);
+  border: none;
+  font-size: 1em;
+  text-align: center;
+ }
+
+ #counter input:focus {
+  outline: none;
+ }
