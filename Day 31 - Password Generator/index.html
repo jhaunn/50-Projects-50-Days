@@ -8,37 +8,37 @@
    </head>
    
    <body>
-      <form>
+      <main>
          <h1>Password Generator</h1>
 
          <div id="result">
-            <span>Pa$$w0rd</span>
-            <button><i class="fa-regular fa-clipboard"></i></button>
+            <span id="password"></span>
+            <button id="clipboard"><i class="fa-regular fa-clipboard"></i></button>
          </div>
 
          <div class="setting">
             <label for="password-length">Password Length</label>
-            <input type="number" name="password-length" id="password-length" value="10">
+            <input type="number" name="password-length" id="password-length" value="8">
          </div>
          <div class="setting">
             <label for="uppercase">Include uppercase letters</label>
-            <input type="checkbox" name="uppercase" id="uppercase" checked>
+            <input type="checkbox" name="uppercase" id="uppercase">
          </div>
          <div class="setting">
             <label for="lowercase">Include lowercase letters</label>
-            <input type="checkbox" name="lowercase" id="lowercase" checked>
+            <input type="checkbox" name="lowercase" id="lowercase">
          </div>
          <div class="setting">
             <label for="numbers">Include numbers</label>
-            <input type="checkbox" name="numbers" id="numbers" checked> 
+            <input type="checkbox" name="numbers" id="numbers"> 
          </div>
          <div class="setting">
             <label for="symbols">Include symbols</label>
-            <input type="checkbox" name="symbols" id="symbols" checked>
+            <input type="checkbox" name="symbols" id="symbols">
          </div>
 
-         <button type="submit">Generate Password</button>
-      </form>
+         <button id="generate">Generate Password</button>
+      </main>
    </body>
    
    <script src="app.js"></script>
