@@ -33,4 +33,25 @@ body div {
   font-size: 3.5em;
   font-weight : 400;
   color: #0E83AA;
+
+  position: relative;
+  z-index: -1;
+  transform-origin: bottom;
+
+  animation: timer_anim 1s ease-out 0.5s infinite;
+}
+
+#countdown h2 {
+  height: 70px;
+
+  background-color: white;
+}
+
+@keyframes timer_anim {
+  0% {
+    transform: rotate(0deg) translateY(-0%);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-0%);
+  }
 }
