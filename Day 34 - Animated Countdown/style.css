@@ -19,6 +19,16 @@ body div {
   text-align: center;
 
   position: absolute;
+
+  transition: transform 0.5s;
+}
+
+div.hidden {
+  transform: scale(0);
+}
+
+div.shown {
+  transform: scale(1);
 }
 
 #replay h1 {
@@ -38,7 +48,7 @@ body div {
   z-index: -1;
   transform-origin: bottom;
 
-  animation: timer_anim 1s ease-out 0.5s infinite;
+  animation: timer_anim 1s ease-out 0.7s infinite;
 }
 
 #countdown h2 {
