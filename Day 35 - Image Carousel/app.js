@@ -1,18 +1,30 @@
 let carousel = document.querySelector('#carousel'); 
 let prevBtn = document.querySelector('#prev');
 let nextBtn = document.querySelector('#next');
+let current = 0;
 
-// nextBtn.addEventListener('click', e => {
-//    document.querySelectorAll('#carousel img').forEach(element => {
-//       element.classList.remove('active');
-//       element.classList.add('inactive');
-//    });
+nextBtn.addEventListener('click', e => {
+   if(current < carousel.querySelectorAll('img').length - 1) {
+      current++;
+   }
+   else{
+      current = 0;
+   }
 
-//    let img = document.createElement('img');
-//    img.src = './Images/wallpaperflare.com_wallpaper.jpg';
-//    carousel.appendChild(img);
+   carousel.querySelectorAll('img').forEach(element => {
+      element.style.transform = `translate(${-current * 100}%)`;
+   });
+});
 
-//    setTimeout(() => {
-//       img.classList.add('active');
-//    }, 10)
-// });
+prevBtn.addEventListener('click', e => {
+   if(current > 0) {
+      current--;
+   }
+   else {
+      current = carousel.querySelectorAll('img').length - 1;
+   }
+
+   carousel.querySelectorAll('img').forEach(element => {
+      element.style.transform = `translate(${-current * 100}%)`;
+   });
+});
