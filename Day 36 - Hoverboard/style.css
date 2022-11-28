@@ -30,5 +30,13 @@ body {
   display: inline-block;
   background-color: #25292D;
 
-  transition: background-color 5s;
+  transition: background-color 1s;
+}
+
+.keys.lit {
+  background-color: #edf2f4;
+}
+
+.keys.unlit {
+  background-color: #25292D;
 }
