@@ -10,12 +10,15 @@ for (let i = 0; i < 500; i++) {
 
 keys.forEach(element => {
    element.addEventListener('mouseover', e => {
-      element.style.backgroundColor = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substring(1,7);
+      let color = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substring(1,7)
+      element.style.backgroundColor = color;
+      element.style.boxShadow = `0 0 5px ${color}`;
    });
 
    element.addEventListener('mouseleave', e => {
       setTimeout(function() {
          element.style.backgroundColor = '#25292D';
+         element.style.boxShadow = '0 0 5px #25292D';
       }, 1000);
    })
 });
