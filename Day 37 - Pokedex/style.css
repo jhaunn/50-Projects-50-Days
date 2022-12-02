@@ -39,7 +39,7 @@ main {
   height: 150px;
   margin: 15px auto;
 
-  background-color: darkgray;
+  background-color: transparent;
   object-fit: cover;
 }
 
