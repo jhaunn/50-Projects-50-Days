@@ -6,3 +6,91 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+
+  position: absolute;
+  z-index: -1;
+  
+  filter: blur(10px);
+}
+
+main {
+  padding: 35px;
+  border-radius: 5px;
+
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#title {
+  margin-bottom: 25px;
+}
+
+#title h1 {
+  margin-bottom: 5px;
+
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+#title p {
+  font-size: 1em;
+}
+
+.login {
+  margin-bottom: 15px;
+
+  text-align: left;
+}
+
+.login label {
+  margin-bottom: 10px;
+
+  display: block;
+}
+
+.login input {
+  width: 100%;
+  padding: 5px;
+  border: lightgray 1px solid;
+  border-radius: 5px;
+
+  font-size: 1em;
+}
+
+.login input:focus {
+  outline: none;
+
+  border: #1877F2 2px solid;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 1.25em;
+
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
