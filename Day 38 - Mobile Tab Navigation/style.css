@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   
-  background-color:gainsboro;
+  background-color: #cdb4db;
 }
 
 body>div {
@@ -28,15 +28,17 @@ body>div {
   background-color: white;
 }
 
-div>img {
+div>#image {
   margin: 5px 5px 0px 5px;
   height: 550px;
   width: 350px;
   border-radius: 15px 15px 0 0;
 
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./Images/Placeholder.jpg);
 
-  display: block;
+  transition: background-image 0.5s;
 }
 
 div>#buttons {
@@ -48,10 +50,20 @@ div>#buttons {
   justify-content: space-between;
 }
 
-#buttons button {
+button {
   width: 75px;
   height: 50px;
 
   background: none;
   border: none;
+
+  color: gray;
+}
+
+button.active {
+  color: blueviolet;
+}
+
+button:hover {
+  cursor: pointer;
 }
